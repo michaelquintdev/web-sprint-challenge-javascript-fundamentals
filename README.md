@@ -38,8 +38,8 @@ Edit this document to include your answers after each question. Make sure to lea
     A closure is when a nested function reaches outside of it's scope to the outer function to access data.
 
 4. Describe the four rules of the 'this' keyword.
-    1. If the this key isn't given an object or context to bind to it will return the window which is the global object for browsers. "use strict" will return undefined to help developers.
-    2. Implicit binding is when the this keyword is used within a function of an object. When you use this and you call the function within the object, "this" is referring to the object to the left of the dot. 
+    1. If the this key isn't given an object, or context to bind to, it will return the window which is the global object for browsers. "use strict" will return undefined to help developers.
+    2. Implicit binding is when the this keyword is used within a function of an object. When you call the function within the object after construction, "this" is referring to the object to the left of the dot. 
     3. Explicit binding is when this is used in a function that is not a value contained by an object. Using the .call, .apply, and .bind methods externally will bind this to an object however as opposed to having it default to the global one. 
     4. New binding basically states that the this keyword is being bound to whatever new object is being constructed. 
 
