@@ -89,7 +89,10 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(){
-    /*Your Code Here*/
+    const array = zooAnimals.filter(function(item){
+      return item.population < 5;
+    })
+    return array;
   }
   
 
@@ -99,8 +102,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(){
+    const array = zooAnimals.reduce(function(acc, item){
+      return acc + item.population;
+    },0)
+    return array;
   }
   
   
@@ -112,8 +118,8 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    return cb(a,b);
   }
  
   
