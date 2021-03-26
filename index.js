@@ -61,7 +61,7 @@ const zooAnimals = [
 
   function animalNames(){
     const displayNames = [];
-    zooAnimals.forEach(function(item){
+    zooAnimals.forEach((item) => {
       displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
     })
     return displayNames;
@@ -76,9 +76,7 @@ const zooAnimals = [
 
   function lowerCaseNames(){
     let newArray = [];
-    zooAnimals.map(function(item){
-      newArray.push(item.animal_name.toLowerCase());
-    })
+    zooAnimals.map(item => newArray.push(item.animal_name.toLowerCase()))
     return newArray;
   }
   
@@ -89,9 +87,7 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(){
-    const array = zooAnimals.filter(function(item){
-      return item.population < 5;
-    })
+    const array = zooAnimals.filter( item => { return item.population < 5; })
     return array;
   }
   
@@ -103,9 +99,7 @@ const zooAnimals = [
   */
 
   function USApop(){
-    const array = zooAnimals.reduce(function(acc, item){
-      return acc + item.population;
-    },0)
+    const array = zooAnimals.reduce((acc, item)=>{return acc + item.population;},0)
     return array;
   }
   
@@ -118,35 +112,30 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(a, b, cb){
-    return cb(a,b);
-  }
- 
+const consume = (a, b, cb) => cb(a,b);
+
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(a, b){
-    return a + b;
-  }
+const add = (a, b) =>  a + b; 
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(a, b){
-   return a *b;
-  }
+const multiply = (a, b) => a *b;
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(first, last){
-   return `Hello ${first} ${last}, nice to meet you!`
-  }
+const greeting = (first, last) => `Hello ${first} ${last}, nice to meet you!`;
   
+
+
+
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  // console.log(consume(2, 2, add)); // 4
-  // console.log(consume(10, 16, multiply)); // 160
-  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+  console.log(consume(2, 2, add)); // 4
+  console.log(consume(10, 16, multiply)); // 160
+  console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
   
   
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
